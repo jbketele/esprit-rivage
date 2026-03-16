@@ -7,3 +7,4 @@ function includeHTML(id, file) {
 }
 
 includeHTML("header", "assets/components/header.html");
+includeHTML("footer", "assets/components/footer.html");
