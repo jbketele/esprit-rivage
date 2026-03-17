@@ -18,6 +18,10 @@ p {
     color: #1B3A57;
 }
 
+footer p {
+    color: white;
+}
+
 #services {
     padding: 60px 20px;
     background-color: #f8f8f8;
