@@ -1,0 +1,241 @@
+#hero::before {
+    background-image: url("/assets/imgs/location-vue-mer.png");
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1B3A57;
+}
+
+h3,
+h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #1B3A57;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #1B3A57;
+}
+
+#services {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    color: #1B3A57;
+}
+
+.services-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.services-intro p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #1B3A57;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+#offres {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: sans-serif;
+    color: #1B3A57;
+}
+
+.offers-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.offers-intro p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.offers-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .offers-cards {
+        justify-content: space-around;
+    }
+}
+
+.offer-card {
+    background-color: #fff;
+    padding: 25px 20px;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.offer-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.offer-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.offer-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.offer-card ul li {
+    margin-bottom: 8px;
+}
+
+.offer-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.section-separator {
+    width: 50%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .section-separator {
+        width: 20%;
+    }
+}
+
+.options h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+.options-container,
+.packs-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    width: calc(100% + 25px);
+    margin-inline: -12.5px;
+    margin-bottom: 20px;
+}
+
+/* Card individuelle option/pack */
+.pack-card,
+.options-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pack-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.options-card h4,
+.pack-card h4 {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.options-card h4 {
+    margin-bottom: 20px;
+}
+
+.options-card p,
+.pack-card p {
+    font-size: 0.65rem;
+}
+
+.options-des {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.options-price {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.full-pack {
+    height: auto;
+}
+
+
+@media (min-width: 768px) {
+    .packs-container {
+        gap: 15px;
+    }
+
+    .pack-card {
+        padding: 15px;
+    }
+
+    .options-card h4,
+    .pack-card h4 {
+        font-size: 1rem;
+    }
+
+    .options-card p,
+    .pack-card p {
+        font-size: 0.85rem;
+    }
+}
