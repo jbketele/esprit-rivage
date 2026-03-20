@@ -1,0 +1,66 @@
+#hero::before {
+    background-image: url("/assets/imgs/promenade-normandie.jpg");
+}
+
+.contact-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.contact-hero-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+#contact {
+    background-color: #f8f4ef;
+    padding: 60px 20px;
+}
+
+.contact-form {
+    box-shadow: none;
+    background-color: transparent;
+    border: 2px solid #c9a96e;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* BOUTON */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #c9a96e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #555;
+}
