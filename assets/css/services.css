@@ -95,6 +95,7 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    align-items: flex-start;
 }
 
 @media (min-width: 768px) {
