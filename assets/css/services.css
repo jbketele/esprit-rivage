@@ -7,10 +7,10 @@ h2 {
     color: #1B3A57;
 }
 
-h3,
-h4 {
+h3 {
     font-family: 'Raleway', sans-serif;
     color: #1B3A57;
+    font-size: 1.3rem;
 }
 
 p {
@@ -63,7 +63,6 @@ footer p {
 }
 
 .service-card h3 {
-    font-size: 1.3rem;
     margin-bottom: 10px;
 }
 
@@ -120,7 +119,6 @@ footer p {
 }
 
 .offer-card h3 {
-    font-size: 1.3rem;
     margin-bottom: 5px;
 }
 
@@ -159,18 +157,18 @@ footer p {
     }
 }
 
-.options h3 {
+.options span {
     font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
 }
 
 .options-container,
 .packs-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 7px;
-    width: calc(100% + 25px);
-    margin-inline: -12.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 20px;
+    align-items: flex-start;
 }
 
 /* Card individuelle option/pack */
@@ -185,6 +183,33 @@ footer p {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .options {
+        width: 75%;
+        max-width: 650px;
+    }
+
+    .options-card {
+        min-height: 120px;
+    }
+
+    .pack-card {
+        min-height: 170px;
+    }
+
+    .options-card,
+    .pack-card {
+        min-width: 175px;
+    }
+
+    .full-pack {
+        min-height: 100px;
+        width: 100%;
+        min-width: 555px;
+    }
 }
 
 .pack-card:hover {
@@ -192,20 +217,26 @@ footer p {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-.options-card h4,
-.pack-card h4 {
-    font-size: 0.75rem;
+.options-card h3,
+.pack-card h3 {
     margin-bottom: 5px;
-    font-weight: 600;
 }
 
-.options-card h4 {
+.options-card h3 {
     margin-bottom: 20px;
 }
 
-.options-card p,
-.pack-card p {
-    font-size: 0.65rem;
+.options-card details {
+    font-size: 0.8rem;
+    margin-top: auto;
+    display: block;
+}
+
+.options-card details ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    text-align: left;
 }
 
 .options-des {
@@ -226,17 +257,17 @@ footer p {
 
 
 @media (min-width: 768px) {
-    .packs-container {
+
+    .packs-container,
+    .options-container {
         gap: 15px;
+        justify-content: space-between;
+        width: 100%;
+        margin-inline: 0;
     }
 
     .pack-card {
         padding: 15px;
-    }
-
-    .options-card h4,
-    .pack-card h4 {
-        font-size: 1rem;
     }
 
     .options-card p,
