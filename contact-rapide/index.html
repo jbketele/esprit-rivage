@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esprit Rivage - Contact Rapide</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/vague-conciergerie.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/contact-rapide.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="/assets/imgs/logo-esprit-rivage.png" alt="Logo Esprit Rivage">
+    </header>
+
+    <section id="contact-rapide">
+        <div class="container">
+            <h1>Contact Propriétaires</h1>
+            <form name="contact" method="POST" data-netlify="true" class="qr-form">
+                <input type="hidden" name="form-name" value="contact">
+
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Téléphone</label>
+                    <input type="tel" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <img src="/assets/imgs/logo-footer.png" alt="Logo Esprit Rivage">
+        <p>De Merville-Franceville à Honfleur</p>
+        <small>&copy; 2026 Esprit Rivage. Tous droits réservés.</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+body {
+    height: 100%;
+    background-color: seashell;
+}
+
+header {
+    padding: 5px;
+    text-align: center;
+    height: 75px;
+    border-bottom: solid 2px #c9a96e;
+    background-color: white;
+}
+
+header img {
+    height: 100%;
+}
+
+#contact-rapide {
+    padding: 20px;
+}
+
+h1 {
+    color: #1B3A57;
+    text-align: center;
+}
+
+.qr-form {
+    box-shadow: none;
+    background-color: transparent;
+    border: 2px solid #1B3A57;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #c9a96e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1B3A57;
+    /* bleu du site */
+    color: #ffffff;
+    padding: 2rem 1rem;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+footer img {
+    height: 60px;
+    margin-bottom: 10px;
+}
