@@ -586,3 +586,76 @@ header {
         margin-left: 15px;
     }
 }
+
+/* Modal */
+/* Fond overlay */
+#modal-devis {
+    display: none;
+    /* caché par défaut */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* quand actif */
+#modal-devis.active {
+    display: flex;
+}
+
+/* contenu */
+.modal-devis-content {
+    background: #ffffff;
+    color: #1B3A57;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-devis-content h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    box-shadow: none;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* 👉 2 colonnes uniquement sur desktop */
+@media (min-width: 992px) {
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+form .btn {
+    background-color: #1B3A57;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s, color 0.3s;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+#header {
+    border-bottom: solid 1px #cfaf70;
+}
+
+#hero::before {
+    background-image: url("/assets/imgs/logement-hero.jpg");
+}
+
+.logements-container {
+    color: #1B3A57;
+}

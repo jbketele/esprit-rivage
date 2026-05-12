@@ -1,0 +1,74 @@
+<div class="modal-devis-content">
+
+    <span class="close-devis">&times;</span>
+
+    <h2>Demande de devis</h2>
+
+    <form id="devisForm" class="form-grid">
+
+        <div class="mb-3">
+            <label>Nom / Prénom</label>
+            <input type="text" class="form-control" name="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Téléphone</label>
+            <input type="tel" class="form-control" name="phone">
+        </div>
+
+        <div class="mb-3">
+            <label>Ville</label>
+            <input type="text" class="form-control" name="ville">
+        </div>
+
+        <div class="mb-3">
+            <label>Type du bien (studio, T2, etc.)</label>
+            <input type="text" class="form-control" name="type" required>
+        </div>
+
+        <div class="mb-3">
+            <label>Capacité (personnes)</label>
+            <input type="number" class="form-control" name="capacite">
+        </div>
+
+        <div class="mb-3">
+            <label>Période souhaitée</label>
+            <input type="text" class="form-control" name="periode">
+        </div>
+
+        <div class="mb-3">
+            <label>Services souhaités</label>
+            <textarea class="form-control" name="services"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Annonce existante ?</label><br>
+
+            <label>
+                <input type="radio" name="annonce" value="oui">
+                Oui
+            </label>
+
+            <label>
+                <input type="radio" name="annonce" value="non">
+                Non
+            </label>
+        </div>
+
+        <div class="mb-3">
+            <label>Message supplémentaire</label>
+            <textarea class="form-control" name="message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Envoyer
+        </button>
+
+    </form>
+
+</div>
