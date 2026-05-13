@@ -546,10 +546,6 @@ header {
     transition: background 0.3s;
 }
 
-.btn-footer:hover {
-    background-color: #b89050;
-}
-
 .footer-bottom {
     margin-top: 2rem;
     font-size: 0.8rem;
