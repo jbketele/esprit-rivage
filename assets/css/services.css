@@ -212,11 +212,6 @@ footer p {
     }
 }
 
-.pack-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
 .options-card h3,
 .pack-card h3 {
     margin-bottom: 5px;
@@ -226,17 +221,9 @@ footer p {
     margin-bottom: 20px;
 }
 
-.options-card details {
-    font-size: 0.8rem;
-    margin-top: auto;
-    display: block;
-}
-
-.options-card details ul {
+.options-card ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;
-    text-align: left;
 }
 
 .options-des {
