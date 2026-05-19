@@ -84,7 +84,8 @@
                 <div class="values-list">
                     <div class="value-item">
                         <i class="fa-solid fa-house value-icon"></i>
-                        <p class="value-text"><strong>Proximité :</strong> Je suis local et disponible pour mes clients.
+                        <p class="value-text"><strong>Proximité :</strong> Implanté localement, je reste disponible pour
+                            mes clients.
                         </p>
                     </div>
                     <div class="value-item">
@@ -114,7 +115,7 @@
             <h2 class="service-area-title">Zone d’intervention</h2>
 
             <p class="service-area-text">
-                J’interviens sur la Côte Fleurie, de Merville-Franceville à Honfleur.
+                J’interviens sur la Côte Fleurie, de Merville-Franceville à Trouville-sur-Mer.
             </p>
 
             <!-- Liste des villes -->
@@ -137,19 +138,11 @@
                 </div>
                 <div class="service-area-item">
                     <i class="fa-solid fa-location-dot service-area-icon"></i>
-                    <span>Deauville-Trouville</span>
+                    <span>Deauville</span>
                 </div>
                 <div class="service-area-item">
                     <i class="fa-solid fa-location-dot service-area-icon"></i>
-                    <span>Trouville</span>
-                </div>
-                <div class="service-area-item">
-                    <i class="fa-solid fa-location-dot service-area-icon"></i>
-                    <span>Villerville</span>
-                </div>
-                <div class="service-area-item">
-                    <i class="fa-solid fa-location-dot service-area-icon"></i>
-                    <span>Honfleur</span>
+                    <span>Trouville-sur-Mer</span>
                 </div>
             </div>
             <div id="map"></div>
@@ -207,7 +200,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         // Initialisation carte centrée sur la Côte Fleurie
-        const map = L.map('map').setView([49.332060784626925, 0.014137383054544372], 10);
+        const map = L.map('map').setView([49.3107337451925, 0.024260083566041146], 11);
 
         // Fond de carte (gratuit)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -220,9 +213,7 @@
             { name: "Cabourg | Dives sur mer | Houlgate", coords: [49.29, -0.12] },
             { name: "Villers-sur-Mer", coords: [49.3214437, -0.0052517] },
             { name: "Blonville-sur-Mer", coords: [49.3391667, 0.0313889] },
-            { name: "Deauville-Trouville", coords: [49.36012649536133, 0.08390788733959198] },
-            { name: "Villerville", coords: [49.4016667, 0.1294444] },
-            { name: "Honfleur", coords: [49.42, 0.23] }
+            { name: "Deauville-Trouville", coords: [49.36012649536133, 0.08390788733959198] }
         ];
 
         // Ajouter les marqueurs
@@ -241,14 +232,14 @@
         const zone = L.polygon([
             [49.29363610733247, -0.21437263194516332],
             [49.30796940763722, -0.08159532767954447],
-            [49.40469587258639, 0.12157918195351058],
-            [49.428820136924415, 0.22700311361937064],
-            [49.41814199621682, 0.2669525207820733],
-            [49.3837448241022, 0.23277448465904627],
-            [49.34613032030772, 0.2030660750032398],
-            [49.31659306877886, 0.07455323767295852],
+            [49.32774809897607, -0.008675632859991289],
+            [49.34139751226948, 0.021638027894494982],
+            [49.37846753399602, 0.07977162860964615],
+            [49.333222095215326, 0.13557356637456053],
+            [49.318119391460996, 0.07103274072359778],
+            [49.27569854735521, 0.0000634783917430326],
             [49.263585928563835, -0.04411513495687691],
-            [49.23757838562523, -0.18208164480926659]
+            [49.246897167922235, -0.1796650269662292]
         ], {
             color: '#2A5B7F',
             fillColor: '#cce5ff',
