@@ -534,18 +534,6 @@ header {
     font-size: 1.5rem;
 }
 
-.btn-footer {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #cfaf70;
-    color: #ffffff;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
 .footer-bottom {
     margin-top: 2rem;
     font-size: 0.8rem;
@@ -562,6 +550,15 @@ header {
 
     .footer-column {
         flex: 1;
+    }
+
+    .footer-logo-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        width: 50%;
     }
 
     .footer-column:nth-child(2) {
