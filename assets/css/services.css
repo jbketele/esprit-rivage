@@ -10,6 +10,11 @@ h2 {
 h3 {
     font-family: 'Raleway', sans-serif;
     color: #1B3A57;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #1B3A57;
     font-size: 1.3rem;
 }
 
@@ -27,6 +32,7 @@ footer p {
     background-color: #f8f8f8;
     text-align: center;
     color: #1B3A57;
+    scroll-margin-top: 80px;
 }
 
 .services-intro h2 {
@@ -89,6 +95,17 @@ footer p {
     margin: 0 auto 40px auto;
 }
 
+.formule {
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto 40px auto;
+    font-size: 1.5rem;
+}
+
 .offers-cards {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +123,7 @@ footer p {
 .offer-card {
     background-color: #fff;
     padding: 25px 20px;
+    margin-bottom: 50px;
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -118,13 +136,8 @@ footer p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.offer-card h3 {
-    margin-bottom: 5px;
-}
-
-.offer-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 10px;
+.offer-card h4 {
+    margin-bottom: 20px;
     font-style: italic;
 }
 
@@ -144,6 +157,15 @@ footer p {
     font-weight: bold;
     font-style: italic;
     margin-top: 10px;
+}
+
+.formule-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.formule-card {
+    padding-inline: 50px;
 }
 
 .section-separator {
@@ -192,16 +214,14 @@ footer p {
         max-width: 650px;
     }
 
-    .options-card {
+    .options-card,
+    .formule-card {
         min-height: 120px;
+        min-width: 175px;
     }
 
     .pack-card {
         min-height: 170px;
-    }
-
-    .options-card {
-        min-width: 175px;
     }
 
     .options-card:last-child {
@@ -215,11 +235,11 @@ footer p {
     }
 }
 
-.options-card h3 {
+.options-card h4 {
     margin-bottom: 5px;
 }
 
-.options-card h3 {
+.options-card h4 {
     margin-bottom: 20px;
 }
 

@@ -436,6 +436,22 @@ header {
     line-height: 1.6;
 }
 
+.services-bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-offers {
+    background-color: white;
+    color: #1B3A57;
+    padding: 10px 20px;
+    border: 2px solid #1B3A57;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+}
+
 @media (min-width: 768px) {
     .services-container {
         display: grid;
