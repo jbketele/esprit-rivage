@@ -251,31 +251,48 @@ header {
 
 @media (min-width: 768px) {
     .home-about-container {
-        display: grid;
-        grid-template-columns: 400px 400px;
         gap: 4rem;
         max-width: 1200px;
         margin: auto;
         justify-content: center;
     }
 
-    .home-about-part {
+    #home-about p {
+        text-align: left;
+    }
+
+    #home-about .home-about-part {
         flex: 1;
         text-align: left;
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
 
-    .home-about-part h2 {
+    #home-about .home-about-part h2 {
         font-size: 2rem;
-        text-align: left;
+        text-align: center;
     }
 
-    .home-about-part p {
+    #home-about .home-about-part p {
         font-size: 1.1rem;
         line-height: 1.7;
         max-width: 100%;
         margin: 0;
     }
+}
+
+.home-about-part-image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.home-about-part-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 #history {
@@ -318,6 +335,27 @@ header {
         font-family: 'raleway', sans-serif;
         font-size: 1.1rem;
         line-height: 1.7;
+    }
+
+    .home-about-part-image img {
+        width: 50%;
+    }
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.section-separator {
+    width: 50%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .section-separator {
+        width: 20%;
     }
 }
 
