@@ -10,21 +10,21 @@
 
   <!-- Services -->
   <url>
-    <loc>https://esprit-rivage.fr/services</loc>
+    <loc>https://esprit-rivage.fr/services/</loc>
     <lastmod>2026-06-02</lastmod>
     <priority>0.9</priority>
   </url>
 
   <!-- À propos -->
   <url>
-    <loc>https://esprit-rivage.fr/about</loc>
+    <loc>https://esprit-rivage.fr/about/</loc>
     <lastmod>2026-05-27</lastmod>
     <priority>0.9</priority>
   </url>
 
   <!-- Contact -->
   <url>
-    <loc>https://esprit-rivage.fr/contact</loc>
+    <loc>https://esprit-rivage.fr/contact/</loc>
     <lastmod>2026-05-27</lastmod>
     <priority>0.6</priority>
   </url>
