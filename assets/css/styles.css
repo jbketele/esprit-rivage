@@ -549,6 +549,61 @@ header {
     }
 }
 
+#avis h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#avis {
+    padding: 2rem 1rem;
+    background-color: #ffffff;
+    color: #1B3A57;
+}
+
+.avis-container {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.avis-item {
+    display: none;
+    padding: 20px;
+    text-align: left;
+}
+
+.avis-item.active {
+    display: block;
+}
+
+.avis-container span {
+    color: #f5b301;
+    font-size: 1.2rem;
+}
+
+.avis-prev,
+.avis-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.avis-prev {
+    left: 0;
+}
+
+.avis-next {
+    right: 0;
+}
+
 #footer {
     background-color: #1B3A57;
     /* bleu du site */
