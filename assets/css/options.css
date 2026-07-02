@@ -1,0 +1,186 @@
+.header-voyageurs {
+    border-bottom: 1px solid #cfaf70;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== LAYOUT GLOBAL ===== */
+#services-voyageurs {
+    padding: 0;
+}
+
+/* container principal 2 colonnes */
+.shop-layout {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: flex-start;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* ===== PRODUITS (GAUCHE) ===== */
+.products-section {
+    flex: 2;
+}
+
+/* grille produits */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* carte produit */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    transition: 0.3s;
+}
+
+/* image produit */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* contenu produit */
+.product-content {
+    padding: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2e5d4d;
+}
+
+/* bouton */
+button {
+    background: #2e5d4d;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* gauche produits */
+
+.products-section {
+    flex: 2;
+}
+
+/* ===== PANIER (DROITE) ===== */
+#cart {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+    padding: 20px;
+    height: fit-content;
+    top: 20px;
+}
+
+/* titre panier */
+#cart h2 {
+    margin-bottom: 15px;
+}
+
+/* items panier */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* bouton suppression */
+.cart-item button {
+    background: #c0392b;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+/* footer panier */
+.cart-footer {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+/* bouton commande */
+.btn-checkout {
+    display: block;
+    text-align: center;
+    background: #2e5d4d;
+    color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* total */
+#total {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-card.selected {
+    border: 2px solid #2e5d4d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .shop-layout {
+        flex-direction: column;
+    }
+
+    #cart {
+        width: 100%;
+        position: relative;
+        top: auto;
+    }
+}
+
+.footer-voyageurs {
+    text-align: center;
+    padding: 20px;
+    background: #1B3A57;
+    color: #fff;
+    margin-top: 40px;
+}
+
+a {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
