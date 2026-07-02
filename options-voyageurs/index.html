@@ -51,9 +51,9 @@
                             </ul>
 
                             <div class="product-footer">
-                                <span class="price">39 €</span>
+                                <span class="price">17 €</span>
 
-                                <button onclick="addToCart('Panier de produits locaux', 39, this)">
+                                <button onclick="addToCart('Panier local', 17, this)">
                                     Choisissez cette option
                                 </button>
                             </div>
@@ -75,7 +75,7 @@
                             <div class="product-footer">
                                 <span class="price">15 €</span>
 
-                                <button onclick="addToCart('Kit plage', 15, this)">
+                                <button onclick="addToCart('Sac & serviette de plage', 15, this)">
                                     Choisissez cette option
                                 </button>
                             </div>
@@ -96,8 +96,11 @@
             <div id="cart-items"></div>
 
             <div class="cart-footer">
-                <h3>Total : <span id="total">0</span> €</h3>
-
+                <h3>
+                    Total :
+                    <span id="total">0</span> €
+                    <span id="old-total" class="old-total"></span>
+                </h3>
                 <a href="commande.html" class="btn-checkout" onclick="saveCart()">
                     Passer à la commande
                 </a>
@@ -114,51 +117,89 @@
     <script>
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+        const PROMO_PRICE = 30;
+
         function saveCart() {
             localStorage.setItem("cart", JSON.stringify(cart));
         }
 
-        /* ===== AJOUT ===== */
+        function isInCart(name) {
+            return cart.some(item => item.name === name);
+        }
+
         function addToCart(name, price, button) {
 
-            const existingIndex = cart.findIndex(item => item.name === name);
+            // ❌ un seul produit de chaque type
+            if (isInCart(name)) return;
 
-            if (existingIndex !== -1) {
-                cart[existingIndex].price = price;
-            } else {
-                cart.push({ name, price });
-            }
-
+            cart.push({ name, price });
             saveCart();
             updateCart();
-            updateButtons();
+
+            // UX bouton
+            if (button) {
+                button.innerText = "Ajouté ✓";
+                button.disabled = true;
+            }
         }
 
-        /* ===== SUPPRESSION ===== */
         function removeFromCart(index) {
 
-            const removedItem = cart[index].name; // 🔥 on garde le nom
+            const removed = cart[index];
 
             cart.splice(index, 1);
-
             saveCart();
             updateCart();
-            updateButtonState(removedItem, false); // 🔥 reset bouton
+
+            // réactiver bouton correspondant
+            const buttons = document.querySelectorAll("button");
+
+            buttons.forEach(btn => {
+                if (btn.innerText.includes(removed.name) || btn.onclick?.toString().includes(removed.name)) {
+                    btn.innerText = "Ajouter au panier";
+                    btn.disabled = false;
+                }
+            });
         }
 
-        /* ===== UPDATE PANIER ===== */
+        function calculateTotal() {
+
+            const original = cart.reduce((sum, item) => sum + item.price, 0);
+
+            if (cart.length === 2) {
+                return {
+                    total: PROMO_PRICE,
+                    discount: true,
+                    original
+                };
+            }
+
+            return {
+                total: original,
+                discount: false,
+                original
+            };
+        }
+
         function updateCart() {
 
             const cartItems = document.getElementById("cart-items");
             const totalEl = document.getElementById("total");
 
+            let discountEl = document.getElementById("discount-info");
+            const oldTotalEl = document.getElementById("old-total");
+
+            if (!discountEl) {
+                discountEl = document.createElement("p");
+                discountEl.id = "discount-info";
+                document.getElementById("cart").appendChild(discountEl);
+            }
+
             cartItems.innerHTML = "";
 
-            let total = 0;
+            const result = calculateTotal();
 
             cart.forEach((item, index) => {
-
-                total += item.price;
 
                 const div = document.createElement("div");
                 div.classList.add("cart-item");
@@ -171,61 +212,25 @@
                 cartItems.appendChild(div);
             });
 
-            totalEl.textContent = total;
+            totalEl.textContent = result.total;
+
+            // 💡 affichage ancien prix barré
+
+            if (result.discount) {
+
+                oldTotalEl.textContent = `${result.original}€`;
+
+            } else {
+
+                oldTotalEl.textContent = "";
+
+            }
+
+            saveCart();
         }
 
-        /* ===== RESET BOUTON PRODUIT ===== */
-        function updateButtonState(name, selected) {
-
-            const buttons = document.querySelectorAll("button");
-
-            buttons.forEach(btn => {
-
-                if (btn.onclick && btn.onclick.toString().includes(name)) {
-
-                    if (selected) {
-                        btn.innerText = "Sélectionné ✓";
-                        btn.style.background = "#2e5d4d";
-                    } else {
-                        btn.innerText = "Ajouter au panier";
-                        btn.style.background = "";
-                        btn.disabled = false;
-                    }
-                }
-            });
-        }
-
-        /* ===== RESET GLOBAL ===== */
-        function updateButtons() {
-
-            document.querySelectorAll("button").forEach(btn => {
-
-                const html = btn.getAttribute("onclick");
-
-                if (!html) return;
-
-                const match = html.match(/'([^']+)'/);
-
-                if (!match) return;
-
-                const name = match[1];
-
-                const exists = cart.find(item => item.name === name);
-
-                if (exists) {
-                    btn.innerText = "Sélectionné ✓";
-                    btn.style.background = "#2e5d4d";
-                } else {
-                    btn.innerText = "Ajouter au panier";
-                    btn.style.background = "";
-                    btn.disabled = false;
-                }
-            });
-        }
-
-        /* INIT */
+        // init
         updateCart();
-        updateButtons();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
